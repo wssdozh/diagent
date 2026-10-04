@@ -1,134 +1,308 @@
-﻿[
-    {
-        "name":  "gamedev-audio-design",
-        "category":  "gamedev",
-        "description":  "name: audio-design   Implement game audio practice вЂ” bus/mixer architecture and gain in decibels,",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-camera-systems",
-        "category":  "gamedev",
-        "description":  "name: camera-systems   Build game cameras that feel good вЂ” 2D follow with a deadzone, look-ahead, smoothing, and",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-card-game",
-        "category":  "gamedev",
-        "description":  "  Build a card game: card data, deck/hand/discard zones, draw/shuffle/reshuffle, a turn structure,   costs, and effect resolution. Use for a deckbuilder, TCG/CCG, or roguelike deckbuilder.",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-create-game-assets",
-        "category":  "gamedev",
-        "description":  "name: create-game-assets description: Plan, generate, source, normalize, and validate cohesive visual game assets. Use for art direction, style bibles, sprites, tilesets, backgrounds, UI art, icons, textures, concept art, or 3D asset briefs.",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-dialogue-systems",
-        "category":  "gamedev",
-        "description":  "name: dialogue-systems   Build branching dialogue and narrative вЂ” a node/choice graph with conditions,",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-fps-shooter",
-        "category":  "gamedev",
-        "description":  "name: fps-shooter   Build a first-person shooter: move+mouse-look controller, hitscan or projectile shooting, weapons,",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-game-feel",
-        "category":  "gamedev",
-        "description":  "  Add \"juice\" and game feel that makes actions satisfying вЂ” screen shake, hit-stop/freeze   frames, tweened/eased motion, squash \u0026 stretch, knockback, and layered audio-visual",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-game-jam",
-        "category":  "gamedev",
-        "description":  "  Plan and ship a game under a jam deadline: lock scope to the clock, schedule the hours,   cut features, and submit on time. Use for a game jam (Ludum Dare, GMTK Jam, Global Game",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-game-ui-ux",
-        "category":  "gamedev",
-        "description":  "name: game-ui-ux   Design and build game UI/UX вЂ” HUDs, menus, and overlays вЂ” that survive every screen: anchor-",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-input-systems",
-        "category":  "gamedev",
-        "description":  "name: input-systems   Architect game input вЂ” action mapping (abstracting keys into named actions),",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-level-design",
-        "category":  "gamedev",
-        "description":  "name: level-design   Design and build playable levels вЂ” the blockout/whitebox-to-playable workflow,",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-physics-tuning",
-        "category":  "gamedev",
-        "description":  "name: physics-tuning   Tune game physics for stable, good-feeling motion вЂ” fixed vs variable",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-platformer",
-        "category":  "gamedev",
-        "description":  "name: platformer   Build a 2D platformer: run/jump control with coyote time, jump buffering, and variable jump",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-procedural-gen",
-        "category":  "gamedev",
-        "description":  "name: procedural-gen   Generate game content procedurally вЂ” seeded deterministic RNG, value/Perlin/",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-prototype-fast",
-        "category":  "gamedev",
-        "description":  "name: prototype-fast   Build a playable prototype in about an hour to answer one question вЂ” is it fun? вЂ” with",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-puzzle",
-        "category":  "gamedev",
-        "description":  "  Build a puzzle game: grid/board state, move input, rule-based resolution (match-3 cascades, sokoban   pushes, tile logic), scoring, and undo. Use for a match-3, sokoban, or grid-logic puzzle.",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-roguelike",
-        "category":  "gamedev",
-        "description":  "  Build a roguelike: turn-based grid movement, procedural dungeons, permadeath, field-of-view,   and loot tables. Use for a roguelike/roguelite or turn-based grid dungeon crawler with procedural levels.",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-rpg",
-        "category":  "gamedev",
-        "description":  "  Build an RPG: stats and leveling, inventory and equipment, quests, branching dialogue, save/load,   and combat. Use for an RPG/JRPG, or designing stat, inventory, quest, or combat systems.",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-save-systems",
-        "category":  "gamedev",
-        "description":  "name: save-systems   Design save/load for game state вЂ” choosing what to serialize, file formats,",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-survival-crafting",
-        "category":  "gamedev",
-        "description":  "name: survival-crafting   Build a survival-crafting game: resource gathering, inventory, crafting and a tech tree,",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-tower-defense",
-        "category":  "gamedev",
-        "description":  "name: tower-defense   Build a tower defense: enemies pathing along lanes, wave spawning, towers that auto-target and fire,",
-        "source":  "curated/gamedev-pack"
-    },
-    {
-        "name":  "gamedev-visual-novel",
-        "category":  "gamedev",
-        "description":  "name: visual-novel   Build a visual novel: a branching script, character and background display, a text box with choices,",
-        "source":  "curated/gamedev-pack"
-    }
+[
+  {
+    "id": "apple-design",
+    "name": "apple-design",
+    "category": "design-ui",
+    "description": "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces."
+  },
+  {
+    "id": "banner-design",
+    "name": "banner-design",
+    "category": "design-ui",
+    "description": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage."
+  },
+  {
+    "id": "better-ui",
+    "name": "better-ui",
+    "category": "design-ui",
+    "description": "Polishes and improves the UI in your project. Covers concentric border radius, optical alignment, surface depth, contextual icons, hit areas and more."
+  },
+  {
+    "id": "brand",
+    "name": "brand",
+    "category": "design-ui",
+    "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides."
+  },
+  {
+    "id": "delegation-planner",
+    "name": "delegation-planner",
+    "category": "agent-workflow",
+    "description": "Plans work for delegation to cheaper or weaker subagents before they run it. Decomposes a request into independent and dependent tasks, chooses sequential or asynchronous execution, writes self-contained prompts, defines acceptance criteria and a compact final report. Use when the user asks to delegate work, use cheap models, use Gemini, split work among subagents, or asks for a plan before delegation."
+  },
+  {
+    "id": "design",
+    "name": "design",
+    "category": "design-ui",
+    "description": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads."
+  },
+  {
+    "id": "design-system",
+    "name": "design-system",
+    "category": "design-ui",
+    "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations."
+  },
+  {
+    "id": "fetchira",
+    "name": "fetchira",
+    "category": "tools-creative",
+    "description": "Use Fetchira for current web search, URL reading, deep research, JavaScript page reading, image generation, and provider quota routing. Prefer its listed MCP tools (mcp__fetchira__*) and use the CLI (fetchira) only when MCP is unavailable."
+  },
+  {
+    "id": "gamedev-audio-design",
+    "name": "audio-design",
+    "category": "gamedev",
+    "description": "Implement game audio practice — bus/mixer architecture and gain in decibels, ducking (sidechain), adaptive/dynamic music via layering and re-sequencing, SFX variation, and beat synchronization. Engine-neutral. Use when the user mentions audio mixing, audio buses, adaptive/dynamic music, ducking, SFX variation, music layers, or syncing gameplay to the beat."
+  },
+  {
+    "id": "gamedev-camera-systems",
+    "name": "camera-systems",
+    "category": "gamedev",
+    "description": "Build game cameras that feel good — 2D follow with a deadzone, look-ahead, smoothing, and level-bounds clamping; 3D third-person orbit with collision and first-person look; plus multi-target framing and a shake hook. Engine-neutral techniques that pair with the engine's camera node and rigs like Unity Cinemachine or Godot Camera2D/PhantomCamera. Use when the user mentions camera follow, follow camera, deadzone, look-ahead, camera smoothing, camera bounds/ limits, third-person camera, orbit camera, first-person look, Cinemachine, or camera jitter."
+  },
+  {
+    "id": "gamedev-card-game",
+    "name": "card-game",
+    "category": "gamedev",
+    "description": "Build a card game: card data, deck/hand/discard zones, draw/shuffle/reshuffle, a turn structure, costs, and effect resolution. Use for a deckbuilder, TCG/CCG, or roguelike deckbuilder."
+  },
+  {
+    "id": "gamedev-create-game-assets",
+    "name": "create-game-assets",
+    "category": "gamedev",
+    "description": "Plan, generate, source, normalize, and validate cohesive visual game assets. Use for art direction, style bibles, sprites, tilesets, backgrounds, UI art, icons, textures, concept art, or 3D asset briefs."
+  },
+  {
+    "id": "gamedev-dialogue-systems",
+    "name": "dialogue-systems",
+    "category": "gamedev",
+    "description": "Build branching dialogue and narrative — a node/choice graph with conditions, variables, and localization hooks — and choose between authoring tools Ink and Yarn Spinner or a custom data-driven runner. Engine-neutral. Use when the user mentions dialogue system, branching dialogue, conversation tree, choices, Ink (.ink), Yarn Spinner (.yarn), or NPC dialogue."
+  },
+  {
+    "id": "gamedev-fps-shooter",
+    "name": "fps-shooter",
+    "category": "gamedev",
+    "description": "Build a first-person shooter: move+mouse-look controller, hitscan or projectile shooting, weapons, health, and enemy AI. Use for an FPS, or tuning aim feel, time-to-kill, recoil, or spread."
+  },
+  {
+    "id": "gamedev-game-feel",
+    "name": "game-feel",
+    "category": "gamedev",
+    "description": "Add \"juice\" and game feel that makes actions satisfying — screen shake, hit-stop/freeze frames, tweened/eased motion, squash & stretch, knockback, and layered audio-visual feedback — as engine-neutral techniques that pair with the detected engine's tween, particle, and camera APIs. Use when the user mentions game feel, juice, \"make it feel good/punchy\", screen shake, hit stop, screen freeze, easing, squash and stretch, impact frames, or feedback/polish on hits, jumps, pickups, and deaths."
+  },
+  {
+    "id": "gamedev-game-jam",
+    "name": "game-jam",
+    "category": "gamedev",
+    "description": "Plan and ship a game under a jam deadline: lock scope to the clock, schedule the hours, cut features, and submit on time. Use for a game jam (Ludum Dare, GMTK Jam, Global Game Jam), a 48-hour or weekend build, or scoping and submitting a jam entry."
+  },
+  {
+    "id": "gamedev-game-ui-ux",
+    "name": "game-ui-ux",
+    "category": "gamedev",
+    "description": "Design and build game UI/UX — HUDs, menus, and overlays — that survive every screen: anchor- based responsive layout, resolution/aspect scaling and safe areas, keyboard/gamepad focus navigation, a screen/menu state stack, and event-driven (not polled) HUD updates. Engine- neutral patterns that pair with the detected engine's UI skill. Use when the user mentions HUD, health bar, main menu, pause menu, settings screen, UI layout, anchors, UI scaling, aspect ratio, safe area, controller/keyboard menu navigation, or wiring UI to game state."
+  },
+  {
+    "id": "gamedev-input-systems",
+    "name": "input-systems",
+    "category": "gamedev",
+    "description": "Architect game input — action mapping (abstracting keys into named actions), rebinding with conflict detection and persistence, multi-device support (keyboard, gamepad, touch), analog deadzones, and feel features like input buffering and coyote time, plus accessibility. Engine-neutral. Use when the user mentions input mapping, rebind controls, gamepad support, deadzone, input buffering, coyote time, or accessible controls."
+  },
+  {
+    "id": "gamedev-level-design",
+    "name": "level-design",
+    "category": "gamedev",
+    "description": "Design and build playable levels — the blockout/whitebox-to-playable workflow, player metrics and grid layout, pacing and flow (tension/rest curve), gating and the critical path, and encounter design. Engine-neutral practice. Use when the user mentions level design, blockout/whitebox/greybox, level layout, level pacing, encounter design, or the critical path through a level."
+  },
+  {
+    "id": "gamedev-physics-tuning",
+    "name": "physics-tuning",
+    "category": "gamedev",
+    "description": "Tune game physics for stable, good-feeling motion — fixed vs variable timestep, render interpolation, mass/gravity/drag, continuous collision detection (CCD) to stop tunneling, fixing jitter, and collision layers/masks. Engine-neutral. Use when the user mentions physics feel, jitter, tunneling, fixed timestep, FixedUpdate, CCD, bouncing/unstable physics, or collision layers."
+  },
+  {
+    "id": "gamedev-platformer",
+    "name": "platformer",
+    "category": "gamedev",
+    "description": "Build a 2D platformer: run/jump control with coyote time, jump buffering, and variable jump height, plus tiled levels and hazards. Use for a platformer or Mario/Celeste-like, or tuning jump feel."
+  },
+  {
+    "id": "gamedev-procedural-gen",
+    "name": "procedural-gen",
+    "category": "gamedev",
+    "description": "Generate game content procedurally — seeded deterministic RNG, value/Perlin/ Simplex noise for terrain and heightmaps, grid dungeon generation (rooms + corridors, BSP, random walk), and weighted loot/drop tables. Engine-neutral algorithms. Use when the user mentions procedural generation, perlin/simplex noise, random seed, dungeon generator, heightmap/terrain, or loot tables."
+  },
+  {
+    "id": "gamedev-prototype-fast",
+    "name": "prototype-fast",
+    "category": "gamedev",
+    "description": "Build a playable prototype in about an hour to answer one question — is it fun? — with greybox primitives, a hard timebox, and explicit keep/kill criteria. Use when prototyping a mechanic, making a vertical slice or MVP, greyboxing/blockout, or judging throwaway vs keep."
+  },
+  {
+    "id": "gamedev-puzzle",
+    "name": "puzzle",
+    "category": "gamedev",
+    "description": "Build a puzzle game: grid/board state, move input, rule-based resolution (match-3 cascades, sokoban pushes, tile logic), scoring, and undo. Use for a match-3, sokoban, or grid-logic puzzle."
+  },
+  {
+    "id": "gamedev-roguelike",
+    "name": "roguelike",
+    "category": "gamedev",
+    "description": "Build a roguelike: turn-based grid movement, procedural dungeons, permadeath, field-of-view, and loot tables. Use for a roguelike/roguelite or turn-based grid dungeon crawler with procedural levels."
+  },
+  {
+    "id": "gamedev-rpg",
+    "name": "rpg",
+    "category": "gamedev",
+    "description": "Build an RPG: stats and leveling, inventory and equipment, quests, branching dialogue, save/load, and combat. Use for an RPG/JRPG, or designing stat, inventory, quest, or combat systems."
+  },
+  {
+    "id": "gamedev-save-systems",
+    "name": "save-systems",
+    "category": "gamedev",
+    "description": "Design save/load for game state — choosing what to serialize, file formats, save slots, atomic crash-safe writes, schema versioning and migration, and autosave. Engine-neutral. Use when the user mentions save system, save/load, game state persistence, save slots, autosave, save file corruption, or migrating old saves to a new version."
+  },
+  {
+    "id": "gamedev-survival-crafting",
+    "name": "survival-crafting",
+    "category": "gamedev",
+    "description": "Build a survival-crafting game: resource gathering, inventory, crafting and a tech tree, needs (hunger/thirst/temperature), and base building. Use for a survival or crafting/base-building game."
+  },
+  {
+    "id": "gamedev-tower-defense",
+    "name": "tower-defense",
+    "category": "gamedev",
+    "description": "Build a tower defense: enemies pathing along lanes, wave spawning, towers that auto-target and fire, an economy, and lives. Use for a tower-defense/wave-defense game, or balancing waves and economy."
+  },
+  {
+    "id": "gamedev-visual-novel",
+    "name": "visual-novel",
+    "category": "gamedev",
+    "description": "Build a visual novel: a branching script, character and background display, a text box with choices, save/load, backlog, and skip/auto. Use for a VN, dating sim, or branching story game."
+  },
+  {
+    "id": "ip-as-logo",
+    "name": "ip-as-logo",
+    "category": "tools-creative",
+    "description": "Generate extremely simple, cute, personified square character images with rounded heavy forms, two purposeful character colors, one solid background color, and a dominant lower-corner composition. Use when creating an animal, creature, robot, ghost, plant, object, or other character image, including when the agent should infer three product-relevant directions and propose six independent candidates for approval."
+  },
+  {
+    "id": "laya-routing",
+    "name": "laya-routing",
+    "category": "agent-workflow",
+    "description": "Safely use the local Laya classifier in DSH for task-card normalization, advisory model routing, and shadow evaluation. Activate when the user asks to use Laya, choose a cheaper/stronger model, route subagents, reduce model cost, evaluate task risk, or compare routing quality. Requires structured evidence, deterministic safety overrides, and never treats Laya confidence as authorization."
+  },
+  {
+    "id": "llm-testing",
+    "name": "llm-testing",
+    "category": "security",
+    "description": "Comprehensive LLM security testing prompts for bias detection, data leakage, alignment testing, and adversarial prompt resistance."
+  },
+  {
+    "id": "palette-craft",
+    "name": "palette-craft",
+    "category": "design-ui",
+    "description": "Create mathematically harmonious, perceptually balanced color palettes for any digital product, landing page, app, or brand using Oklab/LCH, APCA contrast, undertone binding, and 60-30-10 surface hierarchy. Use when asked to generate, audit, pick, or tune color palettes, dark/light themes, or CSS design tokens."
+  },
+  {
+    "id": "ponytail",
+    "name": "ponytail",
+    "category": "ponytail",
+    "description": "Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Supports intensity levels: lite, full (default), ultra. Use on ANY coding task: writing, adding, refactoring, fixing, reviewing, or designing code, and choosing libraries or dependencies. Also use whenever the user says \"ponytail\", \"be lazy\", \"lazy mode\", \"simplest solution\", \"minimal solution\", \"yagni\", \"do less\", or \"shortest path\", or complains about over-engineering, bloat, boilerplate, or unnecessary dependencies. Do NOT use for non-coding requests (general knowledge, prose, translation, summaries, recipes)."
+  },
+  {
+    "id": "ponytail-audit",
+    "name": "ponytail-audit",
+    "category": "ponytail",
+    "description": "Whole-repo audit for over-engineering. Like ponytail-review, but scans the entire codebase instead of a diff: a ranked list of what to delete, simplify, or replace with stdlib/native equivalents. Use when the user says \"audit this codebase\", \"audit for over-engineering\", \"what can I delete from this repo\", \"find bloat\", \"ponytail-audit\", or \"/ponytail-audit\". One-shot report, does not apply fixes."
+  },
+  {
+    "id": "ponytail-debt",
+    "name": "ponytail-debt",
+    "category": "ponytail",
+    "description": "Harvest every `ponytail:` comment in the codebase into a debt ledger, so the deliberate shortcuts and deferrals ponytail leaves behind get tracked instead of rotting into \"later means never\". Use when the user says \"ponytail debt\", \"/ponytail-debt\", \"what did ponytail defer\", \"list the shortcuts\", \"ponytail ledger\", or \"what did we mark to do later\". One-shot report, changes nothing."
+  },
+  {
+    "id": "ponytail-gain",
+    "name": "ponytail-gain",
+    "category": "ponytail",
+    "description": "Show ponytail's measured impact as a compact scoreboard: less code, less cost, more speed, from the benchmark medians. One-shot display, not a persistent mode, and not a per-repo number. Trigger: /ponytail-gain, \"ponytail gain\", \"what does ponytail save\", \"show ponytail impact\", \"ponytail scoreboard\"."
+  },
+  {
+    "id": "ponytail-help",
+    "name": "ponytail-help",
+    "category": "ponytail",
+    "description": "Quick-reference card for all ponytail modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /ponytail-help, \"ponytail help\", \"what ponytail commands\", \"how do I use ponytail\"."
+  },
+  {
+    "id": "ponytail-review",
+    "name": "ponytail-review",
+    "category": "ponytail",
+    "description": "Code review focused exclusively on over-engineering. Finds what to delete: reinvented standard library, unneeded dependencies, speculative abstractions, dead flexibility. One line per finding: location, what to cut, what replaces it. Use when the user says \"review for over-engineering\", \"what can we delete\", \"is this over-engineered\", \"simplify review\", or invokes /ponytail-review. Complements correctness-focused review, this one only hunts complexity."
+  },
+  {
+    "id": "security-fuzzing",
+    "name": "security-fuzzing",
+    "category": "security",
+    "description": "Essential fuzzing payloads: SQL injection, command injection, special characters. Curated essentials for vulnerability testing."
+  },
+  {
+    "id": "security-passwords",
+    "name": "security-passwords",
+    "category": "security",
+    "description": "Top password lists for authorized security testing: common passwords, darkweb leaks, worst passwords. Curated essentials (<10MB)."
+  },
+  {
+    "id": "security-patterns",
+    "name": "security-patterns",
+    "category": "security",
+    "description": "Sensitive data patterns for security testing: API keys, credit cards, emails, SSNs, phone numbers, IPs, and more. Use for data discovery and validation."
+  },
+  {
+    "id": "security-payloads",
+    "name": "security-payloads",
+    "category": "security",
+    "description": "Essential exploitation payloads: anti-virus test files, file name exploits, malicious files. Curated for testing."
+  },
+  {
+    "id": "security-usernames",
+    "name": "security-usernames",
+    "category": "security",
+    "description": "Top username lists for enumeration: common usernames, default credentials, names. Curated essentials for authorized testing."
+  },
+  {
+    "id": "shortform-pack",
+    "name": "shortform-pack",
+    "category": "writing-voice",
+    "description": "Turn a raw idea into a TikTok/Shorts/Reels pack: titles, hook, OCR sticker, 6-beat storyboard, caption, and a 2+2+2 hashtag ladder (macro → mid → micro). Uses the local pack CLI plus Fetchira for live counts. Use for TikTok scripts, hashtags, content gaps, storyboards, captions, or \"like TikTok Studio but offline\"."
+  },
+  {
+    "id": "slides",
+    "name": "slides",
+    "category": "design-ui",
+    "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies."
+  },
+  {
+    "id": "slopotron",
+    "name": "slopotron",
+    "category": "writing-voice",
+    "description": "Слопотрон — находит и убирает AI-маркеры, канцелярит и мёртвые паттерны в русскоязычном тексте, то, что выдаёт нейросеть. Использовать, когда просят «почистить от AI», «убрать нейрослоп», «сделать текст живым / человеческим», «прогнать через слопотрон», или когда нужно понять, чем текст пахнет машиной. Работает в два режима: Fix (находит + правит) и Detect (только список флагов). Не переписывает логику и структуру — только убивает маркеры."
+  },
+  {
+    "id": "subculture-chat",
+    "name": "subculture-chat",
+    "category": "writing-voice",
+    "description": "Anti-NPC informal dev-bro tone of voice for indie gamedev, obscure aesthetics, and underground culture. Eliminates corporate fluff, sycophancy, and robotic etiquette in favor of honest, peer-to-peer technical and creative dialogue."
+  },
+  {
+    "id": "ui-styling",
+    "name": "ui-styling",
+    "category": "design-ui",
+    "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications."
+  },
+  {
+    "id": "ui-ux-pro-max",
+    "name": "ui-ux-pro-max",
+    "category": "design-ui",
+    "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks."
+  }
 ]
