@@ -1,0 +1,130 @@
+- insert:
+    - id: preset-for-you
+      name: '@deepseek-ai/dsh-agent-preset'
+      config:
+        id: for-you
+        name: for-you
+        description: Focused engineer mode with concise planning and lightweight delegation
+        order: 5
+        plugins:
+          # 1. Сфокусированная персона уровня Claude Code / Cursor
+          - id: persona
+            name: '@deepseek-ai/dsh-persona'
+            config:
+              prefix: |
+                You are an expert autonomous software engineer.
+
+                ## Tone, Brevity, and Anti-Slop
+                - High signal density: lead directly with the technical answer or action. Omit conversational filler ('Sure!', 'Great question!'), throat-clearing intros, and sign-offs ('Hope this helps!').
+                - Eliminate AI slop & corporate padding: avoid empty inflators ('crucial', 'seamless', 'it is important to note' / 'важно отметить', 'not just X, but Y'). State facts, numbers, and concrete behavior without marketing gloss.
+                - Zero sycophancy: prioritize technical truthfulness over validating user assumptions. No praise, no emotional buffering, no synthetic empathy ('It is completely normal to feel...').
+                - No structural scaffolding: avoid narrating your explanation ('The main takeaway here is...', 'Here is what happens...'). Make the point directly.
+                - Say it once: state each thought once concisely. Never rephrase the same point across consecutive sentences.
+
+                ## Engineering Principles
+                - Understand first: thoroughly inspect existing files, dependencies, and patterns before altering code.
+                - Surgical edits: change only what is strictly necessary. Never introduce unsolicited refactoring, speculative abstractions, or unneeded dependencies.
+                - Verify changes: verify your work with existing tests, linters, or typecheckers whenever available.
+                - Adapt on failure: if a tool call fails or is denied, NEVER blindly repeat the identical call. Analyze the root cause and adjust your approach.
+                - Guideline freshness: do not rely on distant early-session memory of project instructions in extended multi-turn conversations. Before starting an implementation pass or modifying critical subsystem invariants, use `read` on the project's root instructions file (`AGENTS.md`, `CLAUDE.md`, or relevant guidelines, if present in the workspace) if it is no longer in the immediate context tail, ensuring project constraints strictly govern your changes. Avoid redundant re-reads between consecutive file edits in the same turn.
+              suffix: Your working directory is {{cwd}}.
+
+          - id: agent-instructions
+            name: '@deepseek-ai/dsh-agent-instructions'
+            config:
+              maxBytes: 65536
+
+          # 2. Платформенные шеллы
+          - id: tool-bash
+            name: '@deepseek-ai/dsh-tool-bash'
+            disabled: !!js process.platform === 'win32'
+          - id: tool-pwsh
+            name: '@deepseek-ai/dsh-tool-pwsh'
+            disabled: !!js process.platform !== 'win32'
+
+          # 3. Базовые инструменты работы с файлами и задачами
+          - id: tool-fs
+            name: '@deepseek-ai/dsh-tool-fs'
+          - id: tool-fs-search
+            name: '@deepseek-ai/dsh-tool-fs-search'
+            config:
+              sampleOverCapGlobResults: false
+          - id: tool-jobs
+            name: '@deepseek-ai/dsh-tool-jobs'
+          - id: skill-filesystem
+            name: '@deepseek-ai/dsh-skill-filesystem'
+          - id: tool-skill
+            name: '@deepseek-ai/dsh-tool-skill'
+
+          # 4. Лаконичный Plan Mode (без «воды» и 6 абзацев повторений)
+          - id: planning
+            name: cordis:group
+            group: true
+            isolate:
+              planMode: true
+            config:
+              - id: plan-mode
+                name: '@deepseek-ai/dsh-plan-mode'
+                config:
+                  section: |
+                    You are in PLAN MODE. You MUST NOT execute changes, edit files, or run mutating commands.
+                    - Explore first: use read-only inspections (search, read, check) to ground the plan in reality.
+                    - Be decision-complete: define architecture, touched files, public APIs, tests, and risks.
+                    - Do not track planning in todo_write; present the complete plan exclusively via exit_plan_mode.
+
+          # 5. Компактизация контекста
+          - id: compaction
+            name: cordis:group
+            group: true
+            isolate:
+              compaction: true
+              toolResultPruner: true
+            config:
+              - id: compaction-basic
+                name: '@deepseek-ai/dsh-compaction-basic'
+              - id: command-compact
+                name: '@deepseek-ai/dsh-command-compact'
+              - id: tool-result-pruner
+                name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+                config:
+                  thresholdChars: 8192
+                  headChars: 4096
+                  tailChars: 1024
+
+          # 6. Облегченная делегация (без неиспользуемых тяжелых обвязок)
+          - id: delegation
+            name: cordis:group
+            group: true
+            isolate:
+              workflowEngine: true
+            config:
+              - id: tool-subagent-control
+                name: '@deepseek-ai/dsh-tool-subagent-control'
+              - id: tool-subagent-list-agents
+                name: '@deepseek-ai/dsh-tool-subagent-control/list-agents'
+              - id: tool-subagent
+                name: '@deepseek-ai/dsh-tool-subagent'
+                config:
+                  provider: spawn
+                  toolName: subagent
+                  backgroundMode: continuable
+              - id: tool-subagent-fork
+                name: '@deepseek-ai/dsh-tool-subagent'
+                config:
+                  provider: fork
+                  toolName: subagent_fork
+                  backgroundMode: continuable
+
+          - id: tool-ask-user
+            name: '@deepseek-ai/dsh-tool-ask-user'
+          - id: tool-todo
+            name: '@deepseek-ai/dsh-tool-todo'
+            config:
+              allowParallelInProgress: true
+          - id: tool-web
+            name: '@deepseek-ai/dsh-tool-web'
+            config:
+              fetch: true
+              searchTimeoutMs: 60000
+          - id: present
+            name: '@deepseek-ai/dsh-tool-present'

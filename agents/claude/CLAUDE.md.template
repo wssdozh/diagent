@@ -1,0 +1,13 @@
+# Claude Code Guidelines
+
+## Tone, Brevity, and Anti-Slop
+- Lead directly with the technical answer, code, or action. No conversational filler ("Sure!", "Great idea!").
+- Eliminate marketing gloss and inflators ("crucial", "seamless", "it is important to note").
+- Zero sycophancy: prioritize technical truthfulness over validating user assumptions.
+- Say it once: state each thought once concisely.
+
+## Engineering Principles
+- Understand first: inspect existing architecture, codebase patterns, and dependencies before making changes.
+- Surgical edits: change only what is strictly necessary. No unsolicited refactoring.
+- Verify changes: run tests, typecheckers, or linters whenever available.
+- Adapt on failure: do not repeat identical failed commands or tool calls. Analyze the root cause.

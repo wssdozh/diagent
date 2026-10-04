@@ -1,0 +1,5 @@
+# Laya MCP Dependencies
+torch>=2.2.0
+laya==0.1.6
+mcp>=1.0.0
+huggingface_hub>=0.20.0

@@ -1,0 +1,156 @@
+# Template for ~/.dsh/profiles/web/cordis.patch.yml
+# Copy this to your ~/.dsh/profiles/web/cordis.patch.yml and adjust endpoints / keys.
+# Do NOT commit files with actual API keys or personal tokens.
+
+- insert:
+    # 1. MCP: TickTick task management
+    - id: mcp-ticktick
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: ticktick
+        transport: stdio
+        command: npx
+        args:
+          - -y
+          - '@om-surushe/efficient-ticktick'
+        env:
+          TICKTICK_TOKEN: !!js process.env.TICKTICK_TOKEN || "YOUR_TICKTICK_TOKEN"
+          TIMEZONE: !!js process.env.TIMEZONE || "Europe/Moscow"
+
+    # 2. MCP: Fetchira (search / web read / headless browser via WSL)
+    - id: mcp-fetchira
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: fetchira
+        transport: stdio
+        command: wsl.exe
+        args:
+          - -d
+          - Ubuntu
+          - -e
+          - /home/YOUR_USER/.local/bin/fetchira
+          - serve
+        env:
+          FETCHIRA_RELOAD: "1"
+
+    # 3. MCP: Laya (local advisory task router / classifier)
+    - id: mcp-laya
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: laya
+        transport: stdio
+        command: !!js process.getBuiltinModule('node:path').join(process.env.USERPROFILE || process.env.HOME, '.dsh', 'integrations', 'laya', '.venv', 'Scripts', 'python.exe')
+        args:
+          - -u
+          - !!js process.getBuiltinModule('node:path').join(process.env.USERPROFILE || process.env.HOME, '.dsh', 'integrations', 'laya', 'server.py')
+        cwd: !!js process.getBuiltinModule('node:path').join(process.env.USERPROFILE || process.env.HOME, '.dsh', 'integrations', 'laya')
+        env:
+          PYTHONIOENCODING: utf-8
+        toolCallTimeoutMs: 120000
+
+    # 4. MCP: Linear
+    - id: mcp-linear
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: linear
+        transport: stdio
+        command: npx
+        args:
+          - -y
+          - mcp-remote
+          - https://mcp.linear.app/mcp
+
+- id: ui-settings-general
+  name: "@deepseek-ai/dsh-client-ui-settings-general"
+  config:
+    welcomeNoticeVersion: 2026-09-28.1
+
+# LLM Providers Configuration
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      # Local CLI Proxy API (e.g. CLIProxyAPI on 127.0.0.1:8317)
+      localapi:
+        apiKeyEnv: LOCALAPI_API_KEY
+        api: openai-completions
+        baseURL: http://127.0.0.1:8317/v1
+        displayName: cliproxyapi
+        defaultInput:
+          - text
+          - image
+        compat:
+          supportsDeveloperRole: false
+          supportsReasoningEffort: true
+          maxTokensField: max_tokens
+        reasoning: high
+        models:
+          - id: gemini-3.8-flash-high
+            name: gemini-3.8-flash-high
+            contextWindow: 1048576
+            maxTokens: 65536
+            input: [text, image]
+            reasoningEfforts:
+              off: null
+              minimal: minimal
+              low: low
+              medium: medium
+              high: high
+          - id: gpt-6-astra
+            name: gpt-6-astra
+            contextWindow: 272000
+            input: [text, image]
+            reasoningEfforts:
+              off: null
+              low: low
+              medium: medium
+              high: high
+              xhigh: xhigh
+              max: max
+          - id: claude-sonnet-5-5-high
+            name: claude-sonnet-5-5-high
+            contextWindow: 200000
+            maxTokens: 64000
+            input: [text, image]
+            reasoningEfforts:
+              off: null
+              low: low
+              medium: medium
+              high: high
+              max: max
+
+# Permission policy presets
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+
+# Default Agent Model
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: localapi
+    model: gemini-3.8-flash-high
+    reasoningEffort: high
+
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    performanceUsage: compact
+
+# Set default preset to 'for-you'
+- id: agent-preset-registry
+  name: "@deepseek-ai/dsh-agent-preset-registry"
+  config:
+    default: for-you
+    selectedDefault: for-you

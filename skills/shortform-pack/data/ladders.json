@@ -1,0 +1,99 @@
+{
+  "updated": "2026-09-13",
+  "notes": [
+    "tiktok_posts are last-seen publication counts from TikTok Studio / Creative Center UI, not a public API.",
+    "ig_posts are last-seen Instagram post counts from best-hashtags.com, used as a competition proxy when TikTok counts are missing.",
+    "Bands: macro >= 1M TikTok posts (or ig >= 5M), mid 50k–1M, micro < 50k. Rank inside a band by relevance, not raw size."
+  ],
+  "bands": {
+    "macro": { "tiktok_min": 1000000, "ig_min": 5000000 },
+    "mid": { "tiktok_min": 50000, "ig_min": 400000 },
+    "micro": { "tiktok_min": 0, "ig_min": 0 }
+  },
+  "never": ["fyp", "foryou", "foryoupage", "viral", "trending", "tiktok", "xyzbca", "fypシ"],
+  "ladders": {
+    "gamedev": {
+      "seeds": ["gamedev", "indiedev", "indiegame", "unity", "godot", "unreal"],
+      "tags": [
+        { "tag": "gamedev", "tiktok_posts": 2810000, "ig_posts": 2835187, "band": "macro", "why": "category label the algo uses to learn niche" },
+        { "tag": "indiegame", "tiktok_posts": 769000, "ig_posts": 1959919, "band": "mid", "why": "indie players + wishlist intent" },
+        { "tag": "indiedev", "ig_posts": 880837, "band": "mid", "why": "dev-to-dev discovery, screenshot saturday crowd" },
+        { "tag": "gamedevelopment", "ig_posts": 508675, "band": "mid", "why": "process / tutorial searchers" },
+        { "tag": "indiegamedev", "ig_posts": 485954, "band": "mid", "why": "smaller than gamedev, still searchable" },
+        { "tag": "gamedesign", "ig_posts": 748961, "band": "mid", "why": "design talk, not just gameplay dumps" },
+        { "tag": "gameart", "band": "mid", "why": "art / screenshot posts" },
+        { "tag": "devlog", "band": "micro", "why": "search phrase people type for WIP" },
+        { "tag": "gamedevlog", "ig_posts": 759, "band": "micro", "why": "tiny search pocket" },
+        { "tag": "gamedevtips", "ig_posts": 1235, "band": "micro", "why": "how-to search, easy rank" },
+        { "tag": "screenshotsaturday", "band": "micro", "why": "weekly ritual, only if posting that day" },
+        { "tag": "wishlistwednesday", "band": "micro", "why": "only with a Steam / itch link" },
+        { "tag": "indiegamedevlog", "band": "micro", "why": "long-tail search" }
+      ]
+    },
+    "unity": {
+      "seeds": ["unity", "unity3d", "madewithunity", "csharp", "unitytips"],
+      "tags": [
+        { "tag": "unity", "ig_posts": 7190585, "band": "macro", "why": "engine bucket" },
+        { "tag": "madewithunity", "ig_posts": 241087, "band": "mid", "why": "official-ish engine tag, mid competition" },
+        { "tag": "unity3d", "band": "mid", "why": "legacy search still used" },
+        { "tag": "unitygames", "band": "mid", "why": "gameplay of unity titles" },
+        { "tag": "csharp", "ig_posts": 217976, "band": "mid", "why": "code / tutorial videos" },
+        { "tag": "unitytips", "tiktok_posts": 1630, "band": "micro", "why": "TikTok Studio showed ~1.6K — easy search rank" },
+        { "tag": "unitytutorial", "band": "micro", "why": "how-to search" },
+        { "tag": "unity2d", "band": "micro", "why": "2D / top-down / pixel" },
+        { "tag": "gamebuilder", "tiktok_posts": 1300, "band": "micro", "why": "TikTok Studio ~1.3K, tool-adjacent" },
+        { "tag": "learnunity", "band": "micro", "why": "beginner search" }
+      ]
+    },
+    "tower-defense": {
+      "seeds": ["towerdefense", "towerdefence", "strategy"],
+      "tags": [
+        { "tag": "towerdefense", "tiktok_posts": 169000, "band": "mid", "why": "genre search, TikTok Studio ~169K" },
+        { "tag": "towerdefence", "band": "micro", "why": "UK spelling, split audience" },
+        { "tag": "strategy", "ig_posts": 2979049, "band": "mid", "why": "broader genre, use only one" },
+        { "tag": "strategygame", "band": "mid", "why": "players not just gamedevs" },
+        { "tag": "tdgame", "band": "micro", "why": "abbreviation search" },
+        { "tag": "wavetowerdefense", "band": "micro", "why": "long-tail" },
+        { "tag": "rogueliketd", "band": "micro", "why": "only if the game is actually that" }
+      ]
+    },
+    "puzzle": {
+      "seeds": ["puzzle", "casual", "match3", "blockpuzzle"],
+      "tags": [
+        { "tag": "puzzle", "band": "macro", "why": "player bucket" },
+        { "tag": "puzzlegame", "band": "mid", "why": "gameplay search" },
+        { "tag": "casualgame", "band": "mid", "why": "mobile / web casual" },
+        { "tag": "mobilegame", "band": "mid", "why": "touch / webgl / yandex" },
+        { "tag": "hypercasual", "band": "mid", "why": "only if the loop is that simple" },
+        { "tag": "blockpuzzle", "band": "micro", "why": "exact mechanic" },
+        { "tag": "sortinggame", "band": "micro", "why": "color / shelf / jam adjacent" },
+        { "tag": "brainteaser", "band": "micro", "why": "player search" },
+        { "tag": "webglgame", "band": "micro", "why": "browser / yandex games" },
+        { "tag": "yandexgames", "band": "micro", "why": "RU browser platform" }
+      ]
+    },
+    "godot": {
+      "seeds": ["godot", "godotengine", "gdscript"],
+      "tags": [
+        { "tag": "godot", "band": "mid", "why": "engine bucket" },
+        { "tag": "godotengine", "band": "mid", "why": "official name search" },
+        { "tag": "gdscript", "band": "micro", "why": "code tips" },
+        { "tag": "godot4", "band": "micro", "why": "version-specific" },
+        { "tag": "madewithgodot", "band": "micro", "why": "engine pride tag" }
+      ]
+    },
+    "telegram": {
+      "seeds": ["telegram", "telegrambot", "ai"],
+      "tags": [
+        { "tag": "telegram", "band": "macro", "why": "platform bucket" },
+        { "tag": "telegrambot", "band": "mid", "why": "bot builders + users" },
+        { "tag": "aibot", "band": "mid", "why": "AI product search" },
+        { "tag": "aisong", "band": "micro", "why": "generated music" },
+        { "tag": "sunoai", "band": "mid", "why": "only if the stack uses it" },
+        { "tag": "подарипесню", "band": "micro", "why": "product-name search, RU" },
+        { "tag": "нейропесня", "band": "micro", "why": "RU gift-song niche" },
+        { "tag": "телеграмбот", "band": "micro", "why": "RU platform search" }
+      ]
+    }
+  }
+}

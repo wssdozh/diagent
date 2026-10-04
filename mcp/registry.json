@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "servers": {
+    "ticktick": {
+      "description": "TickTick task management with natural language dates and priority support",
+      "command": "npx",
+      "args": ["-y", "@om-surushe/efficient-ticktick"],
+      "env": {
+        "TICKTICK_TOKEN": "${TICKTICK_TOKEN}",
+        "TIMEZONE": "${TIMEZONE:-Europe/Moscow}"
+      }
+    },
+    "fetchira": {
+      "description": "Quota-aware search router, URL reader, headless browser, and deep research",
+      "command": "wsl.exe",
+      "args": ["-d", "Ubuntu", "-e", "fetchira", "serve"],
+      "env": {
+        "FETCHIRA_RELOAD": "1"
+      }
+    },
+    "laya": {
+      "description": "Local advisory task router and domain classifier (CPU inference)",
+      "command": "python",
+      "args": ["-u", "mcp/laya/server.py"],
+      "cwd": "mcp/laya",
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    },
+    "linear": {
+      "description": "Linear project, issue, and cycle management",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"]
+    }
+  }
+}

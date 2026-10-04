@@ -1,0 +1,109 @@
+{
+  "duration_s": 35,
+  "tiktok_studio": [
+    { "id": "hook", "label_ru": "Вступление", "label_en": "Hook", "s": "0-3", "job": "eye-catching preview + spoken search phrase" },
+    { "id": "value", "label_ru": "Описание", "label_en": "Value", "s": "3-8", "job": "what the viewer gets" },
+    { "id": "twist", "label_ru": "Идея", "label_en": "Twist", "s": "8-15", "job": "main feature or challenge" },
+    { "id": "show", "label_ru": "Шоу", "label_en": "Show", "s": "15-28", "job": "key development / gameplay steps" },
+    { "id": "peak", "label_ru": "Главный момент", "label_en": "Peak", "s": "28-33", "job": "the clip they rewatch" },
+    { "id": "cta", "label_ru": "Завершение", "label_en": "CTA", "s": "33-35", "job": "comment / try / follow" }
+  ],
+  "templates": {
+    "devlog": {
+      "hook": {
+        "say_en": "Watch me make {one_liner} — this is the fun part.",
+        "say_ru": "Смотри, как я собираю {one_liner} — вот тут начинается веселье.",
+        "show": "hard cut of the juiciest 1s of the finished loop, then smash to WIP"
+      },
+      "value": {
+        "say_en": "I'll show a simple {genre} in {engine}, with {twist} as the hero.",
+        "say_ru": "Покажу простой {genre} в {engine}, где герой — {twist}.",
+        "show": "editor overview / greybox, 2s max"
+      },
+      "twist": {
+        "say_en": "Top-down, {twist}, and enemy waves that actually read.",
+        "say_ru": "Вид сверху, {twist}, и волны, которые читаются с первого взгляда.",
+        "show": "isolate the weird player / mechanic, zoom"
+      },
+      "show": {
+        "say_en": "First the {twist}, then path, towers, then one dirty wave.",
+        "say_ru": "Сначала {twist}, потом путь, башни, одна грязная волна.",
+        "show": "3 cuts: asset → systems → play"
+      },
+      "peak": {
+        "say_en": "There — {twist} dodging the wave. Feels stupid-smooth.",
+        "say_ru": "Вот — {twist} уворачивается от волны. Тупо приятно.",
+        "show": "uninterrupted gameplay, no UI chrome if possible"
+      },
+      "cta": {
+        "say_en": "{cta}",
+        "say_ru": "{cta}",
+        "show": "freeze last frame + question sticker"
+      }
+    },
+    "gameplay": {
+      "hook": {
+        "say_en": "Ever seen {genre} where {twist}?",
+        "say_ru": "Видел {genre}, где {twist}?",
+        "show": "cold open of the joke / fail / juice"
+      },
+      "value": {
+        "say_en": "One rule: {one_liner}.",
+        "say_ru": "Одно правило: {one_liner}.",
+        "show": "on-screen rule in ≤5 words"
+      },
+      "twist": {
+        "say_en": "The catch is {twist}.",
+        "say_ru": "Фишка в том, что {twist}.",
+        "show": "the moment the rule breaks expectations"
+      },
+      "show": {
+        "say_en": "Watch the loop once, then it gets mean.",
+        "say_ru": "Один спокойный круг — и сразу злее.",
+        "show": "clean loop then difficulty spike"
+      },
+      "peak": {
+        "say_en": "That's the clip.",
+        "say_ru": "Вот этот момент.",
+        "show": "best 3 seconds, maybe 1.25x"
+      },
+      "cta": {
+        "say_en": "{cta}",
+        "say_ru": "{cta}",
+        "show": "end card with handle / store"
+      }
+    },
+    "product": {
+      "hook": {
+        "say_en": "I made a bot that {one_liner}.",
+        "say_ru": "Я сделал бота, который {one_liner}.",
+        "show": "phone screen, finished result first"
+      },
+      "value": {
+        "say_en": "You talk, it {twist}.",
+        "say_ru": "Ты рассказываешь — оно {twist}.",
+        "show": "3 taps of the real UI, no staging"
+      },
+      "twist": {
+        "say_en": "The weird bit: {twist}.",
+        "say_ru": "Странная часть: {twist}.",
+        "show": "the questionnaire / voice / split output"
+      },
+      "show": {
+        "say_en": "Watch one full pass, no skip.",
+        "say_ru": "Один полный проход, без склеек-обманок.",
+        "show": "screen recording, face cam optional"
+      },
+      "peak": {
+        "say_en": "That's the output. Keep it or roast it.",
+        "say_ru": "Вот результат. Бери или минусуй.",
+        "show": "the song / voice / image, full volume"
+      },
+      "cta": {
+        "say_en": "{cta}",
+        "say_ru": "{cta}",
+        "show": "bot handle on screen"
+      }
+    }
+  }
+}

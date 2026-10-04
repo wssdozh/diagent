@@ -1,0 +1,84 @@
+{
+  "default": "gamedev",
+  "profiles": {
+    "gamedev": {
+      "label": "Indie gamedev / Unity",
+      "ladders": ["gamedev", "unity"],
+      "lang": "en",
+      "platforms": ["tiktok", "shorts", "reels"],
+      "cta": {
+        "en": "Drop your own weird player idea below — or ask how I built it.",
+        "ru": "Кидай свою странную идею персонажа в комменты — или спроси, как собрал."
+      },
+      "on_screen_limit": 5,
+      "handles": {},
+      "links": {},
+      "voice": "peer indie, no corporate, no fyp spam"
+    },
+    "block-sorting": {
+      "label": "block-sorting — Unity casual puzzle, Yandex Games / WebGL",
+      "ladders": ["puzzle", "unity", "gamedev"],
+      "lang": "ru",
+      "platforms": ["tiktok", "shorts", "reels"],
+      "cta": {
+        "en": "Want the WebGL build? Comment 'play' and I'll drop the link.",
+        "ru": "Хочешь потыкать WebGL? Пиши «играть» — кину ссылку."
+      },
+      "on_screen_limit": 5,
+      "handles": {},
+      "links": {
+        "repo": "C:/Users/morii/OneDrive/Dokumenter/GitHub/block-sorting"
+      },
+      "facts": [
+        "Unity 2022.3, C#, DOTween, WebGL / Yandex Games",
+        "grid puzzle: drag colored blocks onto matching shelves before the timer",
+        "boosts: freeze, hammer, vacuum",
+        "touch + mouse"
+      ],
+      "voice": "casual puzzle, satisfying drag, timer tension"
+    },
+    "fantaser": {
+      "label": "Fantaser Studio — Telegram bot «Подари песню»",
+      "ladders": ["telegram"],
+      "lang": "ru",
+      "platforms": ["tiktok", "reels", "shorts"],
+      "cta": {
+        "en": "Comment a name + vibe and I'll show what the bot writes.",
+        "ru": "Напиши имя и вайб в комменты — покажу, что бот сочинит."
+      },
+      "on_screen_limit": 5,
+      "handles": {
+        "telegram_test": "@FantaserStudioBot",
+        "telegram_prod": "@FantazerStudioBot"
+      },
+      "links": {
+        "repo": "C:/Users/morii/OneDrive/Dokumenter/GitHub/fantaser.studio"
+      },
+      "facts": [
+        "Telegram bot that turns a questionnaire or a freeform story into a gift song",
+        "generates lyrics, then two music variants, free preview, paid full track",
+        "do not advertise production checkout unless the user asked"
+      ],
+      "voice": "warm gift, slightly magical, not SaaS pitch"
+    },
+    "voiceover": {
+      "label": "Voiceover Telegram bot — Kie TTS",
+      "ladders": ["telegram"],
+      "lang": "ru",
+      "platforms": ["tiktok", "shorts"],
+      "cta": {
+        "en": "Paste a paragraph in comments and I'll say if the bot can voiceline it.",
+        "ru": "Кинь абзац в комменты — скажу, потянет ли бот озвучку."
+      },
+      "handles": {},
+      "links": {
+        "repo": "C:/Users/morii/OneDrive/Dokumenter/GitHub/voiceover"
+      },
+      "facts": [
+        "aiogram 3 + Kie TTS",
+        "groups rapid messages, splits long text into voice parts"
+      ],
+      "voice": "tool demo, before/after audio"
+    }
+  }
+}

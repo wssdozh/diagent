@@ -1,0 +1,134 @@
+﻿[
+    {
+        "name":  "gamedev-audio-design",
+        "category":  "gamedev",
+        "description":  "name: audio-design   Implement game audio practice вЂ” bus/mixer architecture and gain in decibels,",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-camera-systems",
+        "category":  "gamedev",
+        "description":  "name: camera-systems   Build game cameras that feel good вЂ” 2D follow with a deadzone, look-ahead, smoothing, and",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-card-game",
+        "category":  "gamedev",
+        "description":  "  Build a card game: card data, deck/hand/discard zones, draw/shuffle/reshuffle, a turn structure,   costs, and effect resolution. Use for a deckbuilder, TCG/CCG, or roguelike deckbuilder.",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-create-game-assets",
+        "category":  "gamedev",
+        "description":  "name: create-game-assets description: Plan, generate, source, normalize, and validate cohesive visual game assets. Use for art direction, style bibles, sprites, tilesets, backgrounds, UI art, icons, textures, concept art, or 3D asset briefs.",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-dialogue-systems",
+        "category":  "gamedev",
+        "description":  "name: dialogue-systems   Build branching dialogue and narrative вЂ” a node/choice graph with conditions,",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-fps-shooter",
+        "category":  "gamedev",
+        "description":  "name: fps-shooter   Build a first-person shooter: move+mouse-look controller, hitscan or projectile shooting, weapons,",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-game-feel",
+        "category":  "gamedev",
+        "description":  "  Add \"juice\" and game feel that makes actions satisfying вЂ” screen shake, hit-stop/freeze   frames, tweened/eased motion, squash \u0026 stretch, knockback, and layered audio-visual",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-game-jam",
+        "category":  "gamedev",
+        "description":  "  Plan and ship a game under a jam deadline: lock scope to the clock, schedule the hours,   cut features, and submit on time. Use for a game jam (Ludum Dare, GMTK Jam, Global Game",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-game-ui-ux",
+        "category":  "gamedev",
+        "description":  "name: game-ui-ux   Design and build game UI/UX вЂ” HUDs, menus, and overlays вЂ” that survive every screen: anchor-",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-input-systems",
+        "category":  "gamedev",
+        "description":  "name: input-systems   Architect game input вЂ” action mapping (abstracting keys into named actions),",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-level-design",
+        "category":  "gamedev",
+        "description":  "name: level-design   Design and build playable levels вЂ” the blockout/whitebox-to-playable workflow,",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-physics-tuning",
+        "category":  "gamedev",
+        "description":  "name: physics-tuning   Tune game physics for stable, good-feeling motion вЂ” fixed vs variable",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-platformer",
+        "category":  "gamedev",
+        "description":  "name: platformer   Build a 2D platformer: run/jump control with coyote time, jump buffering, and variable jump",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-procedural-gen",
+        "category":  "gamedev",
+        "description":  "name: procedural-gen   Generate game content procedurally вЂ” seeded deterministic RNG, value/Perlin/",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-prototype-fast",
+        "category":  "gamedev",
+        "description":  "name: prototype-fast   Build a playable prototype in about an hour to answer one question вЂ” is it fun? вЂ” with",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-puzzle",
+        "category":  "gamedev",
+        "description":  "  Build a puzzle game: grid/board state, move input, rule-based resolution (match-3 cascades, sokoban   pushes, tile logic), scoring, and undo. Use for a match-3, sokoban, or grid-logic puzzle.",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-roguelike",
+        "category":  "gamedev",
+        "description":  "  Build a roguelike: turn-based grid movement, procedural dungeons, permadeath, field-of-view,   and loot tables. Use for a roguelike/roguelite or turn-based grid dungeon crawler with procedural levels.",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-rpg",
+        "category":  "gamedev",
+        "description":  "  Build an RPG: stats and leveling, inventory and equipment, quests, branching dialogue, save/load,   and combat. Use for an RPG/JRPG, or designing stat, inventory, quest, or combat systems.",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-save-systems",
+        "category":  "gamedev",
+        "description":  "name: save-systems   Design save/load for game state вЂ” choosing what to serialize, file formats,",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-survival-crafting",
+        "category":  "gamedev",
+        "description":  "name: survival-crafting   Build a survival-crafting game: resource gathering, inventory, crafting and a tech tree,",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-tower-defense",
+        "category":  "gamedev",
+        "description":  "name: tower-defense   Build a tower defense: enemies pathing along lanes, wave spawning, towers that auto-target and fire,",
+        "source":  "curated/gamedev-pack"
+    },
+    {
+        "name":  "gamedev-visual-novel",
+        "category":  "gamedev",
+        "description":  "name: visual-novel   Build a visual novel: a branching script, character and background display, a text box with choices,",
+        "source":  "curated/gamedev-pack"
+    }
+]
