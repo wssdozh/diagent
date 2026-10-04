@@ -25,7 +25,7 @@ if (-not (Test-Path $DshHome)) {
     $SourceSkills = Join-Path $RepoRoot "skills"
     $SkillDirs = Get-ChildItem -Path $SourceSkills -Directory
 
-    Write-Host "`n[1/3] Linking authored skills to ~/.dsh/skills..." -ForegroundColor Yellow
+    Write-Host "`n[1/3] Linking skills to ~/.dsh/skills (using Junctions)..." -ForegroundColor Yellow
     foreach ($skill in $SkillDirs) {
         $dest = Join-Path $TargetSkills $skill.Name
         if (Test-Path $dest) {
@@ -35,18 +35,18 @@ if (-not (Test-Path $DshHome)) {
                 continue
             }
             if ($Force) {
-                Write-Host "  [OVERWRITE] $($skill.Name) with link" -ForegroundColor Yellow
+                Write-Host "  [OVERWRITE] $($skill.Name) with junction" -ForegroundColor Yellow
                 if (-not $DryRun) {
                     Remove-Item -Path $dest -Recurse -Force
-                    New-Item -ItemType SymbolicLink -Path $dest -Target $skill.FullName | Out-Null
+                    New-Item -ItemType Junction -Path $dest -Target $skill.FullName | Out-Null
                 }
             } else {
-                Write-Host "  [SKIP] $($skill.Name) exists (use -Force to replace with link)" -ForegroundColor DarkYellow
+                Write-Host "  [SKIP] $($skill.Name) exists (use -Force to replace with junction)" -ForegroundColor DarkYellow
             }
         } else {
             Write-Host "  [LINK] $($skill.Name) -> $dest" -ForegroundColor Green
             if (-not $DryRun) {
-                New-Item -ItemType SymbolicLink -Path $dest -Target $skill.FullName | Out-Null
+                New-Item -ItemType Junction -Path $dest -Target $skill.FullName | Out-Null
             }
         }
     }
